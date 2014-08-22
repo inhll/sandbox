@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Tangle Experiments</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="tangle-experiments.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Tangle -->
+    <script type="text/javascript" src="tangle/Tangle.js"></script>
+
+    <!-- TangleKit (optional) -->
+    <link rel="stylesheet" href="tangle/TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="tangle/TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="tangle/TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="tangle/TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="tangle/TangleKit/TangleKit.js"></script>
+
+    <!-- example -->
+    <script type="text/javascript">
+
+        function setUpTangle () {
+
+            var element = document.getElementById("example");
+
+            var tangle = new Tangle(element, {
+                initialize: function () {
+                    this.cookies = 4;
+                    this.caloriesPerCookie = 50;
+                },
+                update: function () {
+                    this.calories = this.cookies * this.caloriesPerCookie;
+                }
+            });
+        }
+
+    </script>
+</head>
+
+  <body onload="setUpTangle();">
+
+    <div class="container">
+
+      <div>
+        <h1>Tangle Experiments</h1>
+        <p class="lead">Playing with (banging my head against) <a href="http://worrydream.com/Tangle/reference.html" target="_blank">Tangle.JS</a></p>
+        <p>Here we go...</p>
+      </div>
+
+      <div>
+        <h2>Cookies...</h2>
+        <p>When you eat 3 cookies, you consume <b data-var="calories"> calories</b>. That's 7% of your recommended daily calories.</p>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
